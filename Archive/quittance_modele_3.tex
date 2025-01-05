@@ -42,10 +42,10 @@
 \node at (0,0) [rectangle, draw, minimum width=8cm, minimum height=5cm, align=left] {
 \begin{tabular}{crl}
 	\multicolumn{1}{l}{} & \multicolumn{2}{c}{\bf Bailleur}  \\ \cline{2-3} \\
-     \faUser &\textbf{Monsieur} & Paul Martin \\
-    \faEnvelope &\textbf{{{demeurant_genre_proprietaire}}} à  & 456 Rue de Lyon, 69001 Lyon \\
-     \faPhone &\textbf{Téléphone} & 0606~06~06~06 \\
-    \faAt{} &\textbf{E-mail} & jean.dupont@example.com
+     \faUser &\textbf{{{genre_proprietaire}}} & {{nom_proprietaire}} \\
+    \faEnvelope &\textbf{{{demeurant_genre_proprietaire}}} à  & {{adresse_proprietaire}} \\
+     \faPhone &\textbf{Téléphone} & {{tel_proprietaire}} \\
+    \faAt{} &\textbf{E-mail} & {{mail_proprietaire}}
 \end{tabular}
 };
 
@@ -55,13 +55,13 @@
 \node at (10cm,0) [rectangle, draw, minimum width=8cm, minimum height=5cm, align=left] {
 \begin{tabular}{crl}
 	\multicolumn{1}{l}{} & \multicolumn{2}{c}{\bf Locataire}  \\ \cline{2-3} \\
-    \faUser &\textbf{Monsieur} & Jean Dupont \\
+    \faUser &\textbf{{{genre_locataire}}} & {{nom_locataire}} \\
     \faBirthdayCake{}
  &\textbf{{{Ne_genre}}} le & {{date_naissance_locataire}} \\
-    \faEnvelope &\textbf{{{demeurant_genre_locataire}}} à & 123 Rue de Paris, 75001 Paris \\
+    \faEnvelope &\textbf{{{demeurant_genre_locataire}}} à & {{adresse_locataire}} \\
     \faBriefcase &\textbf{Profession} & {{preffession_locataire}} \\
-    \faPhone &\textbf{Téléphone} & 0707~07~07~07 \\
-    \faAt{} &\textbf{E-mail} & jean.dupont@example.com
+    \faPhone &\textbf{Téléphone} & {{tel_locataire}} \\
+    \faAt{} &\textbf{E-mail} & {{mail_locataire}}
 \end{tabular}
 };
 
@@ -72,28 +72,28 @@
 \begin{tabular}{p{0.5\textwidth}|p{0.5\textwidth}}
 	\hline 	
 	\multicolumn{2}{c}{\bf Quittance de loyer}\\
-	\multicolumn{2}{c}{\bf Loyer Descembre 2024}	\\
+	\multicolumn{2}{c}{\bf Loyer {{mois_loyer}}}	\\
 	\hline 
 	\\
 	\begin{tabular}{c>{\raggedleft\arraybackslash}p{0.2\textwidth}>{\raggedright\arraybackslash}p{0.2\textwidth}}
-		\faFile{} &  \textbf{Reçu de} & M. Jean Dupont\\
-		\faMoney & 	\textbf{Somme de}	 & 650.00 \EURdig\\
-		\faCalendar & \textbf{Le} & 01/12/2024\\
+		\faFile{} &  \textbf{Reçu de} & {{id_genre_locataire}} {{nom_locataire}}\\
+		\faMoney & 	\textbf{Somme de}	 & {{somme_loyer}}\\
+		\faCalendar & \textbf{Le} & {{date_loyer}}\\
 		\faMapMarker & \textbf{Loyer des locaux sis à } & {{adresse_loyer}}\\
-		\faPencil & \textbf{En payement du terme du mois de} & Descembre 2024\\
-		\faCheck & \textbf{Fait le} & 03/12/2024\\
+		\faPencil & \textbf{En payement du terme du mois de} & {{mois_loyer}}\\
+		\faCheck & \textbf{Fait le} & {{fais_le}}\\
 	\end{tabular}
 	& \setlength{\arrayrulewidth}{2pt} % Modification de l'épaisseur
 	\begin{tabular}{c>{\raggedleft\arraybackslash}p{0.2\textwidth}>{\raggedright\arraybackslash}p{0.2\textwidth}}	
 		\multicolumn{3}{c}{\bf Détail}\\
 		\hline \\
-		\faHome{} & \textbf{Loyer nu} & 580.0 \EURdig	\\
-		\faBolt{} & \textbf{Charge / Provision de Charges} &  70.0 \EURdig	\\
+		\faHome{} & \textbf{Loyer nu} & {{somme_nu_loyer}}	\\
+		\faBolt{} & \textbf{Charge / Provision de Charges} &  {{somme_charge_loyer}}	\\
 		\\
-		\multicolumn{3}{c}{\bf Montant toltal du terme 650.00 \EURdig }\\
+		\multicolumn{3}{c}{\bf Montant toltal du terme {{somme_loyer}} }\\
 		\hline \\
-		\faMoney{} & \textbf{Payement locataire} & 600.00 \EURdig	\\
-		\faExclamationTriangle{} & \textbf{Solde à payer} &  50.00 \EURdig	\\
+		\faMoney{} & \textbf{Payement locataire} & {{somme_paye_loyer}}	\\
+		\faExclamationTriangle{} & \textbf{Solde à payer} &  {{somme_du_loyer}}	\\
 		&\\
 	\end{tabular}\\
 	%\setlength{\arrayrulewidth}{4pt} % Modification de l'épaisseur
@@ -121,6 +121,6 @@ Certifie que le locataire a bien payé la somme indiquée ci-dessus pour la pér
 
 \noindent
 Signature : \\
-Le propriétaire : Paul Martin
+Le propriétaire : {{nom_proprietaire}}
 
 \end{document}
