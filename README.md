@@ -13,8 +13,8 @@ Voici un exemple du rendu final généré par le programme 👇
 <p align="center"> <img src="quittance.pdf" width="450" alt="Aperçu de la quittance PDF"> </p>
 
 📄 Tu peux aussi télécharger le PDF complet ici :
-➡️ [Télécharger la quittance PDF](https://github.com/THEMEZE/quittance/raw/main/example_quittance.pdf)
-➡️ [Voir l’exemple de quittance PDF](https://github.com/THEMEZE/quittance/blob/main/example_quittance.pdf)
+➡️ [Télécharger la quittance PDF](https://github.com/THEMEZE/quittance/raw/main/quittance.pdf)
+➡️ [Voir l’exemple de quittance PDF](https://github.com/THEMEZE/quittance/blob/main/quittance.pdf)
 
 ---
 
