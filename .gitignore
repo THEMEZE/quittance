@@ -6,7 +6,7 @@ archive/
 ARCHIVE/
 
 # Notebooks Jupyter
-*.ipynb
+#*.ipynb
 
 # Environnements virtuels Python
 venv/
