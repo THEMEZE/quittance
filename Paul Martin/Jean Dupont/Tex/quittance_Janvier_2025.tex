@@ -2,6 +2,7 @@
 \usepackage{fontawesome}
 \usepackage{marvosym}
 
+
 \usepackage{colortbl} % Nécessaire pour personnaliser les lignes
 
 \usepackage{geometry}
@@ -9,7 +10,7 @@
 \geometry{
   %paperwidth=420mm,     % Largeur de la page
   paperwidth=210mm,     % Largeur de la page
-%  paperheight=350mm,    % Hauteur de la page
+  %paperheight=350mm,    % Hauteur de la page
   paperheight=297mm,    % Hauteur de la page
    %paperheight=450mm,
   %textwidth=110mm,      % Largeur du texte
@@ -23,36 +24,33 @@
 \usepackage{tikz}
 
 
-\setlength{\arrayrulewidth}{1.5pt} % Épaisseur des lignes du tableau
+%\setlength{\arrayrulewidth}{1.5pt} % Épaisseur des lignes du tableau
 
 \begin{document}
 
 \begin{center}
-    \Large\textbf{Quittance de Loyer}
+    \textbf{\Huge Quittance de Loyer}
 \end{center}
 
-\noindent
+\vspace{1cm}
 
-\setlength{\arrayrulewidth}{2pt} % Modification de l'épaisseur
+\textbf{\Large Informations sur le bailleur}
 
-%\tikz 
-\begin{tikzpicture}
-	
-
-\node at (0,0) [rectangle, draw, minimum width=8cm, minimum height=5cm, align=left] {
+$$
 \begin{tabular}{crl}
 	\multicolumn{1}{l}{} & \multicolumn{2}{c}{\bf Bailleur}  \\ \cline{2-3} \\
      \faUser &\textbf{Monsieur} & Paul Martin \\
     \faEnvelope &\textbf{demeurant} à  & 456 Rue de Lyon, 69001 Lyon \\
-     \faPhone &\textbf{Téléphone} & 0625690844 \\
+     \faPhone &\textbf{Téléphone} & 0606~06~06~07 \\
     \faAt{} &\textbf{E-mail} & jean.dupont@example.com
 \end{tabular}
-};
+$$
 
-%\vspace{0.5cm}
+\vspace{1cm}
 
-%\tikz 
-\node at (10cm,0) [rectangle, draw, minimum width=8cm, minimum height=5cm, align=left] {
+\textbf{\Large Informations sur le locataire}
+
+$$
 \begin{tabular}{crl}
 	\multicolumn{1}{l}{} & \multicolumn{2}{c}{\bf Locataire}  \\ \cline{2-3} \\
     \faUser &\textbf{Monsieur} & Jean Dupont \\
@@ -63,64 +61,55 @@
     \faPhone &\textbf{Téléphone} & 0707~07~07~07 \\
     \faAt{} &\textbf{E-mail} & jean.dupont@example.com
 \end{tabular}
-};
+$$
 
-\end{tikzpicture}
+\vspace{1cm}
 
-\setlength{\arrayrulewidth}{3pt} % Modification de l'épaisseur
+\textbf{\Large Montant du loyer et période couverte et détails du paiement}
 
-\begin{tabular}{p{0.5\textwidth}|p{0.5\textwidth}}
-	\hline 	
-	\multicolumn{2}{c}{\bf Quittance de loyer}\\
-	\multicolumn{2}{c}{\bf Loyer Janvier 2025}	\\
-	\hline 
-	\\
-	\begin{tabular}{c>{\raggedleft\arraybackslash}p{0.2\textwidth}>{\raggedright\arraybackslash}p{0.2\textwidth}}
-		\faFile{} &  \textbf{Reçu de} & M. Jean Dupont\\
-		\faMoney & 	\textbf{Somme de}	 & 650.00 \EURdig\\
-		\faCalendar & \textbf{Le} & 03/01/2025\\
-		\faMapMarker & \textbf{Loyer des locaux sis à } & 6 rue de la Harpe 75019 Paris\\
-		\faPencil & \textbf{En payement du terme du mois de} & Janvier 2025\\
-		\faCheck & \textbf{Fait le} & 09/01/2025\\
-	\end{tabular}
-	& \setlength{\arrayrulewidth}{2pt} % Modification de l'épaisseur
-	\begin{tabular}{c>{\raggedleft\arraybackslash}p{0.2\textwidth}>{\raggedright\arraybackslash}p{0.2\textwidth}}	
-		\multicolumn{3}{c}{\bf Détail}\\
-		\hline \\
-		\faHome{} & \textbf{Loyer nu} & 580.0 \EURdig	\\
-		\faBolt{} & \textbf{Charge / Provision de Charges} &  70.0 \EURdig	\\
-		\\
-		\multicolumn{3}{c}{\bf Montant toltal du terme 650.00 \EURdig }\\
-		\hline \\
-		\faMoney{} & \textbf{Payement locataire} & 600.00 \EURdig	\\
-		\faExclamationTriangle{} & \textbf{Solde à payer} &  50.00 \EURdig	\\
-		&\\
-	\end{tabular}\\
-	%\setlength{\arrayrulewidth}{4pt} % Modification de l'épaisseur
-	\hline
-    \multicolumn{2}{>{\centering\arraybackslash}p{0.9\textwidth}}{
-        \bfseries \textit{
-        Le paiement de la présente quittance n’emporte pas présomption de paiement des termes antérieurs. Cette quittance ou ce reçu annule tous les reçus qui auraient pu être donnés pour acompte sur le présent terme. En cas de congé précédemment donné, cette quittance ou ce reçu représenterait l’indemnité d’occupation et ne saurait être considéré comme un titre d’occupation. Sous réserve d’encaissement.
-        }
-    }\\
-    \hline
+$$
+\begin{tabular}{r|lcr|l}
+    \textbf{Montant du loyer nu} & 580.0 \EURdig & & \textbf{Date du paiement} & 03/01/2025 \\
+    \textbf{Charges / Provision de Charges} & 70.0 \EURdig & & \textbf{Mode de paiement} & Virement bancaire \\
+    \textbf{Période couverte} & Janvier 2025 & & \textbf{Référence du paiement} & Loyer Janvier 2025 \\
+    
 \end{tabular}
+$$
 
-%\faHome \faMapMarker \faBuilding \faCheck \faPen  \faBolt{} \faMoneyBill{} 
+\vspace{1cm}
 
-
+Je soussigné, {\em Monsieur Paul Martin }, propriétaire du logement situé à {\em 6 rue de la Harpe 75019 Paris}, atteste avoir perçu de {\em Monsieur Jean Dupont} un montant de {\em 600.00 \EURdig} , représentant le loyer pour la période de {\em Janvier 2025 }, incluant {\em 70.0 \EURdig} de charges.\footnote{Le paiement de la présente n’emporte pas présomption de paiement des termes antérieurs. Cette quittance ou ce reçu annule tous les reçus qui auraient pu être donnés pour acompte sur le présent terme. En cas de congés précédemment donnés, cette quittance ou ce reçu représenterait l’indemnité d’occupation et ne saurait être considérée comme un titre d’occupation. Sous réserve d’encaissement.}
 
 
 
 \vspace{1cm}
 
-\noindent
-Certifie que le locataire a bien payé la somme indiquée ci-dessus pour la période spécifiée.
+Émis à {\em Paris}, le {\em 13/01/2025}.
 
-\vspace{2cm}
+\vspace{1cm}
 
 \noindent
-Signature : \\
-Le propriétaire : Paul Martin
+
+\begin{tikzpicture}[shift = {(0,-1)} , overlay, remember picture]
+	
+
+\node at (2,0) [rectangle, draw=none, minimum width=8cm, minimum height=5cm, align=right] {
+\begin{tabular}{ll}
+	\textbf{Signature du bailleur :} \\
+    Monsieur Paul Martin
+\end{tabular}
+};
+
+\node at (12,0) [rectangle, draw=none, minimum width=8cm, minimum height=5cm, align=left] {
+\begin{tabular}{ll}
+	\textbf{Signature du locataire :} \\
+    Monsieur Jean Dupont\\
+    Lu et approuvé. 
+\end{tabular}
+};
+
+\end{tikzpicture}
+
+
 
 \end{document}

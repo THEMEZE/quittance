@@ -1,0 +1,115 @@
+\documentclass{article}
+\usepackage{fontawesome}
+\usepackage{marvosym}
+
+
+\usepackage{colortbl} % Nécessaire pour personnaliser les lignes
+
+\usepackage{geometry}
+\usepackage{lipsum}
+\geometry{
+  %paperwidth=420mm,     % Largeur de la page
+  paperwidth=210mm,     % Largeur de la page
+  %paperheight=350mm,    % Hauteur de la page
+  paperheight=297mm,    % Hauteur de la page
+   %paperheight=450mm,
+  %textwidth=110mm,      % Largeur du texte
+  %textheight=240mm,     % Hauteur du texte
+  left=20mm,            	% Marge gauche
+  right=20mm,			% Marge droite
+  top=20mm,             	% Marge supÃ©rieure
+  bottom=20mm,			% Marge infÃ©rieure
+}
+
+\usepackage{tikz}
+
+
+%\setlength{\arrayrulewidth}{1.5pt} % Épaisseur des lignes du tableau
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge Quittance de Loyer}
+\end{center}
+
+\vspace{1cm}
+
+\textbf{\Large Informations sur le bailleur}
+
+$$
+\begin{tabular}{crl}
+	\multicolumn{1}{l}{} & \multicolumn{2}{c}{\bf Bailleur}  \\ \cline{2-3} \\
+     \faUser &\textbf{{{genre_proprietaire}}} & {{nom_proprietaire}} \\
+    \faEnvelope &\textbf{{{demeurant_genre_proprietaire}}} à  & {{adresse_proprietaire}} \\
+     \faPhone &\textbf{Téléphone} & {{tel_proprietaire}} \\
+    \faAt{} &\textbf{E-mail} & {{mail_proprietaire}}
+\end{tabular}
+$$
+
+\vspace{1cm}
+
+\textbf{\Large Informations sur le locataire}
+
+$$
+\begin{tabular}{crl}
+	\multicolumn{1}{l}{} & \multicolumn{2}{c}{\bf Locataire}  \\ \cline{2-3} \\
+    \faUser &\textbf{{{genre_locataire}}} & {{nom_locataire}} \\
+    \faBirthdayCake{}
+ &\textbf{{{Ne_genre_locataire}}} le & {{date_naissance_locataire}} \\
+    \faEnvelope &\textbf{{{demeurant_genre_locataire}}} à & {{adresse_locataire}} \\
+    \faBriefcase &\textbf{Profession} & {{preffession_locataire}} \\
+    \faPhone &\textbf{Téléphone} & {{tel_locataire}} \\
+    \faAt{} &\textbf{E-mail} & {{mail_locataire}}
+\end{tabular}
+$$
+
+\vspace{1cm}
+
+\textbf{\Large Montant du loyer et période couverte et détails du paiement}
+
+$$
+\begin{tabular}{r|lcr|l}
+    \textbf{Montant du loyer nu} & {{somme_nu_loyer}} & & \textbf{Date du paiement} & {{date_loyer}} \\
+    \textbf{Charges / Provision de Charges} & {{somme_charge_loyer}} & & \textbf{Mode de paiement} & {{mode_payement}} \\
+    \textbf{Période couverte} & {{mois_loyer}} & & \textbf{Référence du paiement} & Loyer {{mois_loyer}} \\
+    
+\end{tabular}
+$$
+
+\vspace{1cm}
+
+Je soussigné, {\em {{genre_proprietaire}} {{nom_proprietaire}} }, propriétaire du logement situé à {\em {{adresse_loyer}}}, atteste avoir perçu de {\em {{genre_locataire}} {{nom_locataire}}} un montant de {\em {{somme_paye_loyer}}} , représentant le loyer pour la période de {\em {{mois_loyer}} }, incluant {\em {{somme_charge_loyer}}} de charges.\footnote{Le paiement de la présente n’emporte pas présomption de paiement des termes antérieurs. Cette quittance ou ce reçu annule tous les reçus qui auraient pu être donnés pour acompte sur le présent terme. En cas de congés précédemment donnés, cette quittance ou ce reçu représenterait l’indemnité d’occupation et ne saurait être considérée comme un titre d’occupation. Sous réserve d’encaissement.}
+
+
+
+\vspace{1cm}
+
+Émis à {\em {{lieu_fait}}}, le {\em {{fais_le}}}.
+
+\vspace{1cm}
+
+\noindent
+
+\begin{tikzpicture}[shift = {(0,-1)} , overlay, remember picture]
+	
+
+\node at (2,0) [rectangle, draw=none, minimum width=8cm, minimum height=5cm, align=right] {
+\begin{tabular}{ll}
+	\textbf{Signature du bailleur :} \\
+    {{genre_proprietaire}} {{nom_proprietaire}}
+\end{tabular}
+};
+
+\node at (12,0) [rectangle, draw=none, minimum width=8cm, minimum height=5cm, align=left] {
+\begin{tabular}{ll}
+	\textbf{Signature du locataire :} \\
+    {{genre_locataire}} {{nom_locataire}}\\
+    Lu et approuvé. 
+\end{tabular}
+};
+
+\end{tikzpicture}
+
+
+
+\end{document}

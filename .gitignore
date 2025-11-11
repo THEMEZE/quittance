@@ -1,0 +1,22 @@
+# 🚫 Fichiers et dossiers à ignorer
+
+# Dossier d'archives
+Archive/
+archive/
+ARCHIVE/
+
+# Notebooks Jupyter
+*.ipynb
+
+# Environnements virtuels Python
+venv/
+.env/
+__pycache__/
+*.pyc
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers temporaires ou sauvegardes d'éditeur
+*.bak*
