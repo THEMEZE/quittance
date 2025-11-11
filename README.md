@@ -31,11 +31,11 @@ Voici un exemple du rendu final généré par le programme 👇
 
 ## 🧱 Structure du projet
 
-📦 quittance/
-    📜 main.py # Code principal de l'application
-    📜 README.md # Ce fichier !
-    📜 requirements.txt # Liste des dépendances Python
-    📁 Non_Bailleur/ # (optionnel) Dossier de sortie pour les quittances générées
+* 📦 `quittance/`
+    * 📜 `main.py` # Code principal de l'application
+    * 📜 `README.md` # Ce fichier !
+    * 📜 `requirements.txt` # Liste des dépendances Python
+    * 📁 `Non_Bailleur/` # (optionnel) Dossier de sortie pour les quittances générées
 
 
 ---
