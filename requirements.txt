@@ -1,2 +1,5 @@
 tkcalendar
 pillow
+reportlab
+Jinja2
+tk
