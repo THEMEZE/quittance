@@ -10,7 +10,7 @@ Elle calcule les montants dus, ajoute les dates automatiquement 📅, et génèr
 Voici un exemple du rendu final généré par le programme 👇
 
 ### 🪶 Exemple :
-<p align="center"> <img src="quittance.pdf" width="450" alt="Aperçu de la quittance PDF"> </p>
+<p align="center"> <img src="quittance.png" width="450" alt="Aperçu de la quittance PDF"> </p>
 
 📄 Tu peux aussi télécharger le PDF complet ici :
 ➡️ [Télécharger la quittance PDF](https://github.com/THEMEZE/quittance/raw/main/quittance.pdf)
@@ -111,4 +111,14 @@ Ce projet est distribué sous licence ??? — tu peux le modifier et le réutili
 git add .
 git commit -m "Mise à jour"
 git push
+```
+
+## ⚙️convertir un PDF en PNG
+
+```bash
+# Avec Poppler
+pdftoppm quittance.pdf quittance -png -singlefile
+
+# Avec ImageMagick
+convert -density 300 quittance.pdf -quality 100 quittance.png
 ```
